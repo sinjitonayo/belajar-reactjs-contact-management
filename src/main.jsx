@@ -13,17 +13,18 @@ import ContactEdit from './components/Contact/ContactEdit.jsx';
 import ContactDetail from './components/Contact/ContactDetail.jsx';
 import AddressCreate from './components/Address/AddressCreate.jsx';
 import AddressEdit from './components/Address/AddressEdit.jsx';
+import Landing from './components/Landing.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
+          <Route path="/" element={<Landing />} />
           <Route path="/register" element={<UserRegister />} />
           <Route path="/login" element={<UserLogin />} />
         </Route>
         <Route path="/dashboard" element={<DashboardLayout />}>
-
           <Route path="users">
             <Route path="profile" element={<UserProfile />} />
             <Route path="logout" element={<UserLogout />} />
