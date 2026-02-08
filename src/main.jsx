@@ -27,6 +27,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="contacts">
             <Route index element={<ContactList/>}/>
             <Route path="create" element={<ContactCreate />} />
+            <Route path=":id/edit" element={<ContactEdit/>}/>
           </Route>
         </Route>
       </Routes>
